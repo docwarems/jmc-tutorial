@@ -17,37 +17,37 @@ hours’ worth of exercises, so some of the exercises have been marked as bonus 
 - [Introduction](#introduction)
 - [Installing Mission Control](#installing-mission-control)
 - [Starting JDK Mission Control](#starting-jdk-mission-control)
-    - [Exercise 1a – Starting the Stand-Alone Version of JMC](#exercise-1a--starting-the-stand-alone-version-of-jmc)
-    - [Exercise 1b – Starting JMC in Eclipse](#exercise-1b--starting-jmc-in-eclipse)
+    - [Exercise 1a - Starting the Stand-Alone Version of JMC](#exercise-1a--starting-the-stand-alone-version-of-jmc)
+    - [Exercise 1b - Starting JMC in Eclipse](#exercise-1b--starting-jmc-in-eclipse)
 - [The JDK Flight Recorder](#the-jdk-flight-recorder)
-    - [Exercise 2a – Starting a JFR Recording](#exercise-2a--starting-a-jfr-recording)
-    - [Exercise 2b – Hot Methods](#exercise-2b--hot-methods)
-    - [Exercise 3 – Latencies](#exercise-3--latencies)
-    - [Exercise 4 (Bonus) – Garbage Collection Behavior](#exercise-4-bonus--garbage-collection-behavior)
-    - [Exercise 5 (Bonus) – Memory Leaks](#exercise-5-bonus--memory-leaks)
-    - [Exercise 6 (Bonus) – WebLogic Server Integration](#exercise-6-bonus--weblogic-server-integration)
-    - [Exercise 7 (Bonus) – JavaFX](#exercise-7-bonus--javafx)
-    - [Exercise 8 (Bonus) – Exceptions](#exercise-8-bonus--exceptions)
-    - [Exercise 9 – Custom Events in JDK 9 (Bonus)](#exercise-9--custom-events-in-jdk-9-bonus)
-    - [Exercise 10 – Custom Rules (Bonus)](#exercise-10--custom-rules-bonus)
+    - [Exercise 2a - Starting a JFR Recording](#exercise-2a--starting-a-jfr-recording)
+    - [Exercise 2b - Hot Methods](#exercise-2b--hot-methods)
+    - [Exercise 3 - Latencies](#exercise-3--latencies)
+    - [Exercise 4 (Bonus) - Garbage Collection Behavior](#exercise-4-bonus--garbage-collection-behavior)
+    - [Exercise 5 (Bonus) - Memory Leaks](#exercise-5-bonus--memory-leaks)
+    - [Exercise 6 (Bonus) - WebLogic Server Integration](#exercise-6-bonus--weblogic-server-integration)
+    - [Exercise 7 (Bonus) - JavaFX](#exercise-7-bonus--javafx)
+    - [Exercise 8 (Bonus) - Exceptions](#exercise-8-bonus--exceptions)
+    - [Exercise 9 - Custom Events in JDK 9 (Bonus)](#exercise-9--custom-events-in-jdk-9-bonus)
+    - [Exercise 10 - Custom Rules (Bonus)](#exercise-10--custom-rules-bonus)
         - [JMC in JShell](#jmc-in-jshell)
         - [Creating Rules](#creating-rules)
         - [Exporting the rule](#exporting-the-rule)
-    - [Exercise 11 – Custom Pages](#exercise-11--custom-pages)
+    - [Exercise 11 - Custom Pages](#exercise-11--custom-pages)
         - [Filters](#filters)
         - [Grouping](#grouping)
         - [Boolean Filter Operations](#boolean-filter-operations)
 - [The Management Console (Bonus)](#the-management-console-bonus)
-    - [Exercise 12a – The Overview](#exercise-12a--the-overview)
-    - [Exercise 12b – The MBean Browser](#exercise-12b--the-mbean-browser)
-    - [Exercise 12c – The Threads View](#exercise-12c--the-threads-view)
-    - [Exercise 12d (Bonus) – Triggers](#exercise-12d-bonus--triggers)
+    - [Exercise 12a - The Overview](#exercise-12a--the-overview)
+    - [Exercise 12b - The MBean Browser](#exercise-12b--the-mbean-browser)
+    - [Exercise 12c - The Threads View](#exercise-12c--the-threads-view)
+    - [Exercise 12d (Bonus) - Triggers](#exercise-12d-bonus--triggers)
 - [Heap Waste Analysis (Bonus)](#heap-waste-analysis-bonus)
     - [Object Selection](#object-selection)
     - [Referrer Tree-table](#referrer-tree-table)
     - [Class Histogram](#class-histogram)
     - [Ancestor referrer](#ancestor-referrer)
-    - [Exercise 13 – Reducing Memory Usage](#exercise-13--reducing-memory-usage)
+    - [Exercise 13 - Reducing Memory Usage](#exercise-13--reducing-memory-usage)
 - [JCMD (Java CoMmanD) (Bonus)](#jcmd-java-command-bonus)
 - [More Resources](#more-resources)
 
@@ -66,9 +66,9 @@ applications running in production on the HotSpot JVM.
 
 JDK Mission Control mainly consists of two tools at the time of writing:
 
-- The JMX Console – a JVM and application monitoring solution based on
+- The JMX Console - a JVM and application monitoring solution based on
     JMX.
-- The JDK Flight Recorder – a very low overhead profiling and diagnostics tool.
+- The JDK Flight Recorder - a very low overhead profiling and diagnostics tool.
 
 There are also plug-ins available that extend the functionality of JDK Mission Control
 to, for example, perform heap waste analysis on heap dumps.
@@ -120,7 +120,7 @@ This exercise shows you how to start both the stand-alone and the Eclipse plug-i
 versions of JDK Mission Control.
 
 <a id="markdown-exercise-1a--starting-the-stand-alone-version-of-jmc" name="exercise-1a--starting-the-stand-alone-version-of-jmc"></a>
-### Exercise 1a – Starting the Stand-Alone Version of JMC
+### Exercise 1a - Starting the Stand-Alone Version of JMC
 
 Go to the directory where you installed the stand-alone version of JMC. In the bin
 folder, you will find a jmc launcher. Either double-click it or run it from the command
@@ -164,7 +164,7 @@ Since we will be running the tutorial from within Eclipse, please shut down (⌘
 
 
 <a id="markdown-exercise-1b--starting-jmc-in-eclipse" name="exercise-1b--starting-jmc-in-eclipse"></a>
-### Exercise 1b – Starting JMC in Eclipse
+### Exercise 1b - Starting JMC in Eclipse
 
 First make sure that you followed the instructions in the README.md file in the root
 of the GitHub repository to the letter, and that the JMC plug-ins are installed Next
@@ -263,7 +263,7 @@ information about recordings and ways of creating them, see
 [http://hirt.se/blog/?p=370.](http://hirt.se/blog/?p=370.)
 
 <a id="markdown-exercise-2a--starting-a-jfr-recording" name="exercise-2a--starting-a-jfr-recording"></a>
-### Exercise 2a – Starting a JFR Recording
+### Exercise 2a - Starting a JFR Recording
 
 There are various ways to start a flight recording. For this exercise, we will use the
 Flight Recording Wizard built into JDK Mission Control.
@@ -295,7 +295,7 @@ remembered. The name will be used when listing the ongoing recordings for a JVM,
 and will also be recorded into the recording itself.
 
 Next select the template you want to use when recording. The template describes the
-configuration to use for the different event types. Select the Profiling – on Server
+configuration to use for the different event types. Select the Profiling - on Server
 template, and hit Finish to start the recording.
 
 ![eclipse jmc start flight recording][eclipse-jmc-start-flight-recording]
@@ -358,7 +358,7 @@ memory.
 ![eclipse close recording window][eclipse-close-recording-window]
 
 <a id="markdown-exercise-2b--hot-methods" name="exercise-2b--hot-methods"></a>
-### Exercise 2b – Hot Methods
+### Exercise 2b - Hot Methods
 
 One class of profiling problems deals with finding out where the application is
 spending the most time executing. Such a “hot spot” is usually a very good place to
@@ -456,7 +456,7 @@ from poor choices in algorithms and data structures.
 
 
 <a id="markdown-exercise-3--latencies" name="exercise-3--latencies"></a>
-### Exercise 3 – Latencies
+### Exercise 3 - Latencies
 
 Another class of problems deals with latencies. A symptom of a latency related
 problem can be lower than expected throughput in your application, without the CPU
@@ -528,7 +528,7 @@ performance and responsiveness of your application.
 
 
 <a id="markdown-exercise-4-bonus--garbage-collection-behavior" name="exercise-4-bonus--garbage-collection-behavior"></a>
-### Exercise 4 (Bonus) – Garbage Collection Behavior
+### Exercise 4 (Bonus) - Garbage Collection Behavior
 
 While JVM tuning is out of the scope for this set of exercises, this exercise will show
 how to get detailed information about the Garbage Collections that happened during
@@ -583,7 +583,7 @@ throwing unnecessary garbage at the poor unsuspecting runtime.
 
 
 <a id="markdown-exercise-5-bonus--memory-leaks" name="exercise-5-bonus--memory-leaks"></a>
-### Exercise 5 (Bonus) – Memory Leaks
+### Exercise 5 (Bonus) - Memory Leaks
 
 One commonly recurring problem is the memory leak. In Java, memory leaks are
 created by unintentionally retaining objects that are no longer of any use to the
@@ -607,7 +607,7 @@ One way to resolve memory leaks is to analyze the heap contents by capturing a h
 dump (see JOverflow). There are, however, many practical problems with heap dumps
 and heap dump analysis:
 
-1. Heap dumps represent all of the heap content – they tend to get very large.
+1. Heap dumps represent all of the heap content - they tend to get very large.
 2. Heap dumps of large heaps take some time to produce, during which the JVM
     is stalled.
 3. Since heap dumps, when originating from a production system, normally come
@@ -628,7 +628,7 @@ allowing you to resolve the problem without having to go off and trying to repro
 it.
 
 
-Since JDK 10 the JVM has a new event available – the Old Object Sample event. It is
+Since JDK 10 the JVM has a new event available - the Old Object Sample event. It is
 very useful little event that can help solve memory leaks without having to do heap
 dumps.
 
@@ -646,7 +646,7 @@ memoryleak_before.jfr recording. It was taken before the memory leak was fixed.
 
 Select an old object sample somewhere in the middle of the interval.
 
-JMC- 6127 is currently being fixed – instead look at the full interval.
+JMC- 6127 is currently being fixed - instead look at the full interval.
 
 ![eclipse jmc jfr memory live objects][eclipse-jmc-jfr-memory-live-objects]
 
@@ -659,7 +659,7 @@ JMC- 6127 is currently being fixed – instead look at the full interval.
 
 
 <a id="markdown-exercise-6-bonus--weblogic-server-integration" name="exercise-6-bonus--weblogic-server-integration"></a>
-### Exercise 6 (Bonus) – WebLogic Server Integration
+### Exercise 6 (Bonus) - WebLogic Server Integration
 
 This exercise will familiarize you with various elements of the new user interface. It
 also shows that it is possible to create integration with JFR and JMC from a party
@@ -744,7 +744,7 @@ source of selections.
 
 
 <a id="markdown-exercise-7-bonus--javafx" name="exercise-7-bonus--javafx"></a>
-### Exercise 7 (Bonus) – JavaFX
+### Exercise 7 (Bonus) - JavaFX
 
 In this exercise, we will explore the Java FX integration with JDK Flight Recorder.
 Use the GUIMark launcher to launch the GUIMark Bitmap benchmark application.
@@ -754,7 +754,7 @@ You should see a tower shooting a laser at monsters.
 
 We will use a pre-recorded recording for this exercise,
 **06_JFR_JavaFX/guimark.jfr** , so you starting GUIMark was mostly pointless.
-But, come on – lasers? Monsters? It had to be seen.
+But, come on - lasers? Monsters? It had to be seen.
 
 Note: If you insist on having a locally produced recording, it is better to run the
 GUIMark Auto Record launcher. If you insist on not using the auto recording
@@ -771,7 +771,7 @@ the longest for that particular pulse? Which was the input event that took the l
 ![eclipse jmc jfr javafx pulse][eclipse-jmc-jfr-javafx-pulse]
 
 <a id="markdown-exercise-8-bonus--exceptions" name="exercise-8-bonus--exceptions"></a>
-### Exercise 8 (Bonus) – Exceptions
+### Exercise 8 (Bonus) - Exceptions
 
 Some applications are throwing an excessive amount of exceptions. Most exceptions
 are caught and logged. Handling these exceptions can be quite expensive for the JVM,
@@ -830,9 +830,9 @@ Note: Zoom until you can distinguish individual event buckets (the y-axis is sho
 1).
 
 <a id="markdown-exercise-9--custom-events-in-jdk-9-bonus" name="exercise-9--custom-events-in-jdk-9-bonus"></a>
-### Exercise 9 – Custom Events in JDK 9 (Bonus)
+### Exercise 9 - Custom Events in JDK 9 (Bonus)
 
-In this exercise we will use an example from a different repository – the java-svc
+In this exercise we will use an example from a different repository - the java-svc
 repo. Clone the following repository:
 
 ```
@@ -882,7 +882,7 @@ Fibonnaci Number.
 
 
 <a id="markdown-exercise-10--custom-rules-bonus" name="exercise-10--custom-rules-bonus"></a>
-### Exercise 10 – Custom Rules (Bonus)
+### Exercise 10 - Custom Rules (Bonus)
 
 There is one more Parser for JFR recordings. One that can run on JDK 7, and which
 also allows the parsing of JDK 7, 8, 9, 10 and 11 recordings transparently. It is the
@@ -958,7 +958,7 @@ ins.
 
 ![eclipse jmc launch with workspace plugins][eclipse-jmc-launch-with-workspace-plugins]
 
-If you get a validation complaint, it will be about localization – simply click Continue.
+If you get a validation complaint, it will be about localization - simply click Continue.
 In the JDK Mission Control client that now starts, find your Idle program and make a
 short (3s or so) recording with the default profiling template.
 
@@ -993,7 +993,7 @@ Deep Dive Exercises:
 
 
 <a id="markdown-exercise-11--custom-pages" name="exercise-11--custom-pages"></a>
-### Exercise 11 – Custom Pages
+### Exercise 11 - Custom Pages
 
 After some time with JDK Flight Recorder you may find yourself repeatedly wanting
 to look at specific pieces of information. JMC 6 provides an easy way to set up
@@ -1110,7 +1110,7 @@ JDK Mission Control includes a very handy JMX console. It has been described as 
 few exercises will show some of the more commonly used ones.
 
 <a id="markdown-exercise-12a--the-overview" name="exercise-12a--the-overview"></a>
-### Exercise 12a – The Overview
+### Exercise 12a - The Overview
 
 Start the LoadAndDeadlock program, like you did in Exercise 2.a. Then switch to
 the Mission Control perspective. After a little while you should see the JVM running
@@ -1158,7 +1158,7 @@ Deep Dive exercises:
     corner of the Overview tab, and instead add one for the Thread Count attribute.
 
 <a id="markdown-exercise-12b--the-mbean-browser" name="exercise-12b--the-mbean-browser"></a>
-### Exercise 12b – The MBean Browser
+### Exercise 12b - The MBean Browser
 
 The MBean browser is where you browse the MBeans available in the platform
 MBean server. If you expose your own application for monitoring through JMX and
@@ -1206,7 +1206,7 @@ Note: Use the Diagnostic Command tab.
 ```
 
 <a id="markdown-exercise-12c--the-threads-view" name="exercise-12c--the-threads-view"></a>
-### Exercise 12c – The Threads View
+### Exercise 12c - The Threads View
 
 Short on time as we are, we skip to the Threads view. Rejoice at the discovery of our
 old friend the Thread Count attribute in the upper chart (needs to be unfolded)! In the
@@ -1238,7 +1238,7 @@ Deep Dive Exercises:
 
 
 <a id="markdown-exercise-12d-bonus--triggers" name="exercise-12d-bonus--triggers"></a>
-### Exercise 12d (Bonus) – Triggers
+### Exercise 12d (Bonus) - Triggers
 
 Let’s set up a trigger that alerts us when the CPU load is above a certain value. Go to
 the Triggers tab. Click the Add... button. Select the **ProcessCPULoad** attribute and
@@ -1335,7 +1335,7 @@ packages.
 Note: it is possible to directly select a piece in the pie chart.
 
 <a id="markdown-exercise-13--reducing-memory-usage" name="exercise-13--reducing-memory-usage"></a>
-### Exercise 13 – Reducing Memory Usage
+### Exercise 13 - Reducing Memory Usage
 
 It seems that quite a few objects used by this old version of JMC, are Sparse Arrays.
 This means that there are arrays with very few actual instances referenced to from
