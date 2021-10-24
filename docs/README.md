@@ -8,7 +8,7 @@
 ```
 This document describes a series of hands on exercises designed to familiarize you
 with some of the key concepts in JDK Mission Control. The material covers several
-hours’ worth of exercises, so some of the exercises have been marked as bonus exercises.
+hours' worth of exercises, so some of the exercises have been marked as bonus exercises.
 ```
 
 <!-- TOC depthFrom:2 -->
@@ -184,7 +184,7 @@ available for Eclipse to use.
 ![eclipse preferences installed jres][eclipse-preferences-installed-jres]
 
 3. If you already have various JDKs installed, they may already show up here. If
-    they don’t, click add to add them. There is a JDK 11 provided in the HoL zip.
+    they don't, click add to add them. There is a JDK 11 provided in the HoL zip.
 
 ```
 Note: when adding a JRE on Mac, select Mac OS X VM. Also note that you
@@ -198,7 +198,7 @@ should browse to the <JDK>/Contents/Home folder.
 ![eclipse preferences execution environments][eclipse-preferences-execution-environments]
 
 ```
-Don’t forget to click Apply and Close when done.
+Don't forget to click Apply and Close when done.
 ```
 Next we will have to import the projects with all the examples into the workspace.
 
@@ -254,11 +254,11 @@ Explorer view again.
 ## The JDK Flight Recorder
 
 The JDK Flight Recorder (JFR) is the main profiling and diagnostics tool in JDK
-Mission Control. Think of it as analogous to the “black box” used in aircraft (FDR, or
+Mission Control. Think of it as analogous to the "black box" used in aircraft (FDR, or
 Flight Data Recorder), but for the JVM. The recorder part is built into the HotSpot
 JVM and gathers data about both the HotSpot runtime and the application running in
 the HotSpot JVM. The recorder can both be run in a continuous fashion, like the
-“black box” of an airplane, as well as for a predefined period of time. For more
+"black box" of an airplane, as well as for a predefined period of time. For more
 information about recordings and ways of creating them, see
 [http://hirt.se/blog/?p=370.](http://hirt.se/blog/?p=370.)
 
@@ -275,21 +275,21 @@ as show below.
 
 ![eclipse run do nothing program][eclipse-run-do-nothing-program]
 
-Note: _There are “Auto Record” versions of most launchers, which will launch the_
+Note: _There are "Auto Record" versions of most launchers, which will launch the_
 application and automatically create a recording in the **_autorecordings_** folder in
 the tutorial root. This is since, in certain environments (slow machines running a
 virtualized Windows for example), the highly loaded JVM that JMC is trying to
 communicate with will take so long to getting around to communicate with JMC that
-it simply is no fun to wait. _If that is the case, simply run the “Auto” launchers._ Or,
+it simply is no fun to wait. _If that is the case, simply run the "Auto" launchers._ Or,
 
-you know, if _you’re lazy. I will not judge._ Just try doing this first exercise without
+you know, if _you're lazy. I will not judge._ Just try doing this first exercise without
 Auto, as it is about doing recordings from JMC.
 
 Switch to the Mission Control perspective and select the newly discovered JVM
 running the DoNothing class in the JVM Browser. Select Start Flight Recording...
 from the context menu. The Flight Recording Wizard will open. Click Browse to find
 a suitable location (e.g. the Recordings project) and filename for storing the
-recording. Don’t forget to name the recording so that it can be recognized by others
+recording. Don't forget to name the recording so that it can be recognized by others
 connecting to the JVM, and so that the purpose of the recording can be better
 remembered. The name will be used when listing the ongoing recordings for a JVM,
 and will also be recorded into the recording itself.
@@ -306,7 +306,7 @@ Recorder node is expanded. It can also be seen in the status bar.
 ![eclipse jmc jvm browser flight recorder node expanded][eclipse-jmc-jvm-browser-flight-recorder-node-expanded]
 
 Use the minute to contemplate intriguing suggestions for how to improve Mission
-Control (don’t forget to e-mail them to marcus.hirt@oracle.com), get a coffee, or read
+Control (don't forget to e-mail them to marcus.hirt@oracle.com), get a coffee, or read
 ahead in the tutorial.
 
 Once the recording is done, it will be downloaded to your Mission Control client, and
@@ -318,10 +318,10 @@ You should be looking at the automated analysis of the recording.
 
 This exercise is just to familiarize you with one of the ways to create a flight
 recording. This will be a rather boring recording, in terms of results from the
-automated analysis, so don’t mind the results of this analysis.
+automated analysis, so don't mind the results of this analysis.
 
 Since the recording was done on a process not doing any actual work, the auto-
-analysis didn’t find anything other than that I should probably run less stuff on my
+analysis didn't find anything other than that I should probably run less stuff on my
 laptop:
 
 1. I am starting to run out of physical memory. I am guessing MS Word ate a
@@ -336,7 +336,7 @@ Select Java Application.
 
 
 Here we get an overview of commonly interesting properties of the recording. This
-process didn’t do much, but we can see that what little it did was spent transferring
+process didn't do much, but we can see that what little it did was spent transferring
 data.
 
 This exercise was mostly to describe how to make a recording, and basic navigation
@@ -361,11 +361,11 @@ memory.
 ### Exercise 2b - Hot Methods
 
 One class of profiling problems deals with finding out where the application is
-spending the most time executing. Such a “hot spot” is usually a very good place to
+spending the most time executing. Such a "hot spot" is usually a very good place to
 start optimizing your application, as any effort bringing down the computational
 overhead in such a method will affect the overall execution of the application a lot.
 
-Like any good cooking show, we’ve provided you with pre-recorded recordings to
+Like any good cooking show, we've provided you with pre-recorded recordings to
 save you from having to wait another few minutes for the recording to finish.
 
 Open the 02_JFR_HotMethods/hotmethods_before.jfr recording.
@@ -446,7 +446,7 @@ longer need.
     program became after the change?
 
 ```
-Note: The application generates custom events for each unit of “work” do ne.
+Note: The application generates custom events for each unit of "work" do ne.
 This makes it easy to compare the time it takes to complete a unit of work
 before and after the code change. Would it be possible to decide how faster
 the program became without these custom events?
@@ -476,7 +476,7 @@ Instances page to take a closer look.
 
 ![eclipse jmc lock instances page][eclipse-jmc-lock-instances-page]
 
-Of what class is the lock we’re blocking on? From where in the code is that event
+Of what class is the lock we're blocking on? From where in the code is that event
 originating?
 
 Note: In this case it is a very shallow trace. In a more complex scenario it would, of
@@ -484,7 +484,7 @@ course, have been deeper.
 
 It seems most of these blocking events come from the same source.
 
-Let’s take a step back and consider the information we’ve gathered. Most of our
+Let's take a step back and consider the information we've gathered. Most of our
 worker threads seem to be waiting on each other attempting to get the Logger lock.
 All calls to that logger seem to be coming from the WorkerThread.run().
 
@@ -536,7 +536,7 @@ the recording, and how to look at allocation profiling information.
 
 Open the allocator_before.jfr recording in the 04_JFR_GC project. Switch to the
 Mission Control perspective (if in Eclipse). Note that in JMC 6.0, the Automated
-Analysis doesn’t really show a clear signal here (it will in JMC 6.1). Instead, go to the
+Analysis doesn't really show a clear signal here (it will in JMC 6.1). Instead, go to the
 Garbage Collections page.
 
 In this page you can see many important aspects about each and every garbage
@@ -639,7 +639,7 @@ the paths back to the GC roots on every dump, you need to specify the path-to-gc
 roots parameter when dumping the flight recorder.
 
 For more information on Old Object Sample events, please see the Old Object Sample
-article on Marcus’ blog (hirt.se/blog).
+article on Marcus' blog (hirt.se/blog).
 
 Project 05_JFR_MemoryLeaks contains memory leaking applications. Open the
 memoryleak_before.jfr recording. It was taken before the memory leak was fixed.
@@ -680,7 +680,7 @@ of the viewPatients servlet took the longest time? How long did it take?
 
 ![eclipse jmc jfr weblogic servlet][eclipse-jmc-jfr-weblogic-servlet]
 
-Let’s take a look at everything that was going on during that request. Select the
+Let's take a look at everything that was going on during that request. Select the
 longest lasting viewPatients servlet, and select the ECID (Execution Context ID) in
 the Properties view. An ECID is an identifier which follows a request through the
 system across process and thread boundaries. A little bit like an Open Tracing Span
@@ -711,8 +711,8 @@ to set the time range for the page to the time range of the active selection. Ca
 find any low-level events that do not have an ECID?
 
 Note: There is, for example, a tiny bit of contention on a log4j logger in the
-beginning. The Blocking event does not have an ECID; it _is shown due to “Show
-concurrent”_ being enabled.
+beginning. The Blocking event does not have an ECID; it _is shown due to "Show
+concurrent"_ being enabled.
 
 
 Open the Event Browser page. Here you can look at the events grouped by Event
@@ -1012,7 +1012,7 @@ the selected event type.
 
 ![eclipse jmc custom pages][eclipse-jmc-custom-pages]
 
-Right click on the name of the new page, and name it “Long Lasting Servlets”:
+Right click on the name of the new page, and name it "Long Lasting Servlets":
 
 ![eclipse jmc rename custom page][eclipse-jmc-rename-custom-page]
 
@@ -1033,7 +1033,7 @@ Now we have a custom page showing the longest lasting servlet requests:
 
 In the custom page, events can also be grouped. Create a new page, using the Servlet
 Request Run event again. Name the page Request Log. Add a new filter from
-attribute, this time ECID. Select isn’t null as the predicate relation.
+attribute, this time ECID. Select isn't null as the predicate relation.
 
 ![eclipse jmc request log ecid grouping][eclipse-jmc-request-log-ecid-grouping]
 
@@ -1106,7 +1106,7 @@ Adding grouping on monitor address would yield something like this:
 ## The Management Console (Bonus)
 
 JDK Mission Control includes a very handy JMX console. It has been described as a
-“JConsole on steroids”, and it certainly has some very convenient features. The next
+"JConsole on steroids", and it certainly has some very convenient features. The next
 few exercises will show some of the more commonly used ones.
 
 <a id="markdown-exercise-12a--the-overview" name="exercise-12a--the-overview"></a>
@@ -1135,7 +1135,7 @@ new blank chart to JMC.
 ![eclipse jmc management console blank chart][eclipse-jmc-management-console-blank-chart]
 
 Click the Add... button of the new chart. In the attribute selector dialog, go to the
-Filter text field and enter “Th” (without quotation marks). Select the ThreadCount
+Filter text field and enter "Th" (without quotation marks). Select the ThreadCount
 attribute, and press ok. You should now see the thread count.
 
 ![eclipse jmc management console thread count][eclipse-jmc-management-console-thread-count]
@@ -1240,7 +1240,7 @@ Deep Dive Exercises:
 <a id="markdown-exercise-12d-bonus--triggers" name="exercise-12d-bonus--triggers"></a>
 ### Exercise 12d (Bonus) - Triggers
 
-Let’s set up a trigger that alerts us when the CPU load is above a certain value. Go to
+Let's set up a trigger that alerts us when the CPU load is above a certain value. Go to
 the Triggers tab. Click the Add... button. Select the **ProcessCPULoad** attribute and
 hit Next.
 
@@ -1253,15 +1253,15 @@ There are a few different actions that can be taken when the rule triggers. Ther
 custom actions downloadable from the update site, and it is also possible to add your
 own.
 
-Let’s stick with the default (Application alert). Click Next. Constraints can be added to
+Let's stick with the default (Application alert). Click Next. Constraints can be added to
 constrain when the action is allowed to be taken. We do not want any constraints for
 this trigger rule. Click Next once more. Enter a name that you will remember for the
 trigger rule, then hit Finish.
 
-Trigger rules are by default inactive. Let’s enable the trigger by clicking the checkbox
+Trigger rules are by default inactive. Let's enable the trigger by clicking the checkbox
 next to its name. The rule is now active. Move over to the Overview and wait for one
 of the computationally intense cycles to happen. The Alert dialog should appear and
-show you details about the particular event. If that isn’t enough to generate the
+show you details about the particular event. If that isn't enough to generate the
 necessary CPU load, try resizing Eclipse like crazy for more than a second.
 
 ![eclipse jmc trigger alerts][eclipse-jmc-trigger-alerts]
@@ -1368,7 +1368,7 @@ jcmd on your path, this will list the running java processes and their Process I
 well.
 
 The jcmd uses the PID to identify what JVM to talk to. (It can also use the main class
-for identification, but let’s stick with PID for now.) Type **jcmd <PID> help** , for
+for identification, but let's stick with PID for now.) Type **jcmd <PID> help** , for
 example **jcmd 4711 help**. That will list all available diagnostic commands in that
 particular Java process. Different versions of the JVM may have different sets of
 commands available to them. If <PID> is set to 0, the command will be sent to all
@@ -1382,8 +1382,8 @@ Deep Dive Exercises:
     for a little while, and then run it again. Can you find any specific use for it?
 22. You decide that you want your friend to access a running server that has been
     up for a few days from his computer to help you solve a problem. Oh dear,
-    you didn’t start the external agent when you started the server, did you? Can
-    you find a solution that doesn’t involve taking the server down?
+    you didn't start the external agent when you started the server, did you? Can
+    you find a solution that doesn't involve taking the server down?
 
 ```
 Note: If you want to try the solution without specifying keystores and
@@ -1425,10 +1425,10 @@ The JDK Mission Control twitter account:
 JDK Mission Control on Facebook:
 https://www.facebook.com/javamissionctrl/
 
-Marcus Hirt’s JDK Mission Control articles:
+Marcus Hirt's JDK Mission Control articles:
 [http://hirt.se/blog](http://hirt.se/blog)
 
-Marcus Hirt’s twitter account:
+Marcus Hirt's twitter account:
 [http://twitter.com/hirt](http://twitter.com/hirt)
 
 [jmc-logo]: images/jmc-logo.png
