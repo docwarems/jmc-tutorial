@@ -246,6 +246,7 @@ Control button on the toolbar to launch a Wizard.
 ![eclipse jmc launch wizard jfr][eclipse-jmc-launch-wizard-jfr]
 
 *MS: for me a Java 16 is displayed.*
+
 ![ms Java 16][ms-java16]
 
 The Java perspective is the perspective with a little J on the icon:
@@ -281,6 +282,7 @@ as show below.
 ![eclipse run do nothing program][eclipse-run-do-nothing-program]
 
 *MS: for me this deprecation warning appeared. It seems I'm running a higher Java version as the tutorial expects. The launch reports a Java 10 JRE. Also see my comment on Java 16 above.*
+
 ![ms flightrecorder deprecated][ms-flightrecorder-deprecated]
 
 
@@ -326,6 +328,7 @@ You should be looking at the automated analysis of the recording.
 ![eclipse jmc automated recording analysis do nothing][eclipse-jmc-automated-recording-analysis-do-nothing]
 
 *MS: as you can see for me there's no console tab available. I also didn't find one in the context menus of the toolbar icons on the right.*
+
 ![ms-2a-no-console-tab][ms-2a-no-console-tab]
 
 This exercise is just to familiarize you with one of the ways to create a flight
