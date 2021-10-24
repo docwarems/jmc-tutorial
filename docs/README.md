@@ -224,6 +224,8 @@ optimized for working with JMC, called the JDK Mission Control perspective. To
 open the JDK Mission Control Perspective, click the Mission Control perspective in
 the upper right corner of Eclipse.
 
+*MS: for me after installation the JMC perspective icon was not visible. I had to click on "Open perspective" and select the JMC icon. Once I did, the JMC icon appeared as a permanent perspective icon. It should be noticed that - similar to the standalone JMC startup described above - the JMC splashscreen indicates the JMC loading.*
+
 ![eclipse jmc perspective button toggle][eclipse-jmc-perspective-button-toggle]
 
 In this tutorial, you will be constantly switching between the Java perspective, to look
@@ -242,6 +244,9 @@ the context menu of the JVM that you wish to launch the tool on, or click the Mi
 Control button on the toolbar to launch a Wizard.
 
 ![eclipse jmc launch wizard jfr][eclipse-jmc-launch-wizard-jfr]
+
+*MS: for me a Java 16 is displayed.*
+![ms Java 16][ms-java16]
 
 The Java perspective is the perspective with a little J on the icon:
 
@@ -274,6 +279,10 @@ Recordings. Next start the DoNothing program by right clicking on the
 as show below.
 
 ![eclipse run do nothing program][eclipse-run-do-nothing-program]
+
+*MS: for me this deprecation warning appeared. It seems I'm running a higher Java version as the tutorial expects. The launch reports a Java 10 JRE. Also see my comment on Java 16 above.*
+![ms flightrecorder deprecated][ms-flightrecorder-deprecated]
+
 
 Note: _There are "Auto Record" versions of most launchers, which will launch the_
 application and automatically create a recording in the **_autorecordings_** folder in
@@ -315,6 +324,9 @@ opened. Switch to the JDK Mission Control perspective.
 You should be looking at the automated analysis of the recording.
 
 ![eclipse jmc automated recording analysis do nothing][eclipse-jmc-automated-recording-analysis-do-nothing]
+
+*MS: as you can see for me there's no console tab available. I also didn't find one in the context menus of the toolbar icons on the right.*
+![ms-2a-no-console-tab][ms-2a-no-console-tab]
 
 This exercise is just to familiarize you with one of the ways to create a flight
 recording. This will be a rather boring recording, in terms of results from the
