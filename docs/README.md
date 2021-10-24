@@ -283,7 +283,7 @@ as show below.
 
 *MS: for me this deprecation warning appeared. It seems I'm running a higher Java version as the tutorial expects. The launch reports a Java 10 JRE. Also see my comment on Java 16 above.*
 
-![ms flightrecorder deprecated][ms-flightrecorder-deprecated]
+![ms flightrecorder deprecated](ms-flightrecorder-deprecated)
 
 
 Note: _There are "Auto Record" versions of most launchers, which will launch the_
