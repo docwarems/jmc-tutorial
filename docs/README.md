@@ -247,11 +247,7 @@ Control button on the toolbar to launch a Wizard.
 
 *MS: for me a Java 16 is displayed.*
 
-![ms Java 16](ms-java16)
-![ms Java 16][ms-java16]
-![Foo](ms-java16.png)
 ![ms Java 16](images/ms-java16.png)
-![ms Java 16](images/ms-java16)
 
 
 The Java perspective is the perspective with a little J on the icon:
