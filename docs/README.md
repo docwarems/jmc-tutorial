@@ -284,7 +284,7 @@ as show below.
 
 *MS: for me this deprecation warning appeared. It seems I'm running a higher Java version as the tutorial expects. The launch reports a Java 10 JRE. Also see my comment on Java 16 above.*
 
-![ms flightrecorder deprecated][ms-flightrecorder-deprecated]
+![ms flightrecorder deprecated](images/ms-flightrecorder-deprecated.png)
 
 
 Note: _There are "Auto Record" versions of most launchers, which will launch the_
@@ -330,7 +330,7 @@ You should be looking at the automated analysis of the recording.
 
 *MS: as you can see for me there's no console tab available. I also didn't find one in the context menus of the toolbar icons on the right.*
 
-![ms-2a-no-console-tab][ms-2a-no-console-tab]
+![ms-2a-no-console-tab](images/ms-2a-no-console-tab.png)
 
 This exercise is just to familiarize you with one of the ways to create a flight
 recording. This will be a rather boring recording, in terms of results from the
