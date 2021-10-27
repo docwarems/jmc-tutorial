@@ -224,9 +224,9 @@ optimized for working with JMC, called the JDK Mission Control perspective. To
 open the JDK Mission Control Perspective, click the Mission Control perspective in
 the upper right corner of Eclipse.
 
-*MS: for me after installation the JMC perspective icon was not visible. I had to click on "Open perspective" and select the JMC icon. Once I did, the JMC icon appeared as a permanent perspective icon. It should be noticed that - similar to the standalone JMC startup described above - the JMC splashscreen indicates the JMC loading.*
-
 ![eclipse jmc perspective button toggle][eclipse-jmc-perspective-button-toggle]
+
+*MS: for me after installation the JMC perspective icon was not visible. I had to click on "Open perspective" and select the JMC icon. Once I did, the JMC icon appeared as a permanent perspective icon. It should be noticed that - similar to the standalone JMC startup described above - the JMC splashscreen indicates the JMC loading.*
 
 In this tutorial, you will be constantly switching between the Java perspective, to look
 at code and to open flight recordings, and the Mission Control perspective, to access
