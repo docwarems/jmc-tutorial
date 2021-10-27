@@ -246,7 +246,6 @@ Control button on the toolbar to launch a Wizard.
 ![eclipse jmc launch wizard jfr][eclipse-jmc-launch-wizard-jfr]
 
 *MS: for me a Java 16 is displayed.*
-
 ![ms Java 16](images/ms-java16.png)
 
 
