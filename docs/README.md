@@ -185,6 +185,12 @@ available for Eclipse to use.
 
 3. If you already have various JDKs installed, they may already show up here. If
     they don't, click add to add them. There is a JDK 11 provided in the HoL zip.
+    
+*MS: HoL zip ???*    
+
+*MS: I added my own JDK11 but got a message about missing Java 16 compliance. I don't know if this message is due to a wrong Eclipse setup. So I stayed with the provided JDK.*    
+
+![Java 16 compliance for JDK 11](images/ms-jdk11-not-compatible.png)
 
 ```
 Note: when adding a JRE on Mac, select Mac OS X VM. Also note that you
@@ -248,7 +254,6 @@ Control button on the toolbar to launch a Wizard.
 *MS: for me a Java 16 is displayed.*
 
 ![ms Java 16](images/ms-java16.png)
-
 
 The Java perspective is the perspective with a little J on the icon:
 
@@ -389,6 +394,9 @@ Open the 02_JFR_HotMethods/hotmethods_before.jfr recording.
 Note: Switch to the Java perspective and open (double click) the recording in the
 02_JFR_HotMethods project named hotmethods_before.jfr.
 
+*MS: While I was out of context of this text I was wondering how to open a saved JFR recording with "File open". It became not immediately clear to me that the "JMC file open" is now done by the "Eclipse file open" menu. I think this is could be worth to mention.*
+
+
 ![eclipse jmc automated recording analysis hotmethods][eclipse-jmc-automated-recording-analysis-hotmethods]
 
 Switch back to the JDK Mission Control perspective once the recording is open. Even
@@ -410,10 +418,14 @@ Next click on the Profiling lane. The stack trace view will show the aggregated 
 traces of any selection in the editor. It will now show you the stack traces for the
 profiling samples.
 
+*MS: Better: "Next click on the Method Profiling lane in the chart". (Name has changed in JMC 8; it also wasn't immediately clear to me that I had to search for a lane with that name in the chart)*
+
 In the recording, one of these methods has a lot more samples than the others. This
 means that the JVM has spent more time executing that method relative to the other
 methods. Which method is the hottest one? From where do the calls to that method
 originate?
+
+*MS: where do you have this info from? On the automatic analysis page, I can find that fact. But should I see this from the Java Application page which is currently open? Currently I see only a sequence of red rectancles probably without further meaning for someone learning JMC.*
 
 Which method do you think would be the best one to optimize to improve the
 performance of this application?
@@ -426,11 +438,15 @@ profiling samples per package and class of where the sample was captured.
 
 ![eclipse jmc method profiling hotmethods][eclipse-jmc-method-profiling-hotmethods]
 
+*MS: the screenshot looks different in JMC 8.*
+
 In the stack trace view, the most commonly traveled path is shown by default,
 effectively giving you the most common stack trace directly. Wherever the path
 branches, there is a branch icon ( , ). You can use the right and left arrow keys to
 select between the different branches (Frame Groups), or use the toolbar buttons
 ( , ):
+
+*MS: should there be inline images of the icons here instead of ( , )? Should key shortcuts be shown in the icon tooltipp. Or should I guess that I can use arrow keys instead of icon?*
 
 ![eclipse jmc stacktrace next frame group][eclipse-jmc-stacktrace-next-frame-group]
 
@@ -470,6 +486,7 @@ the program became without these custom events?
 The moral of the exercise is that no matter how fast the JVM is, it can never save you
 from poor choices in algorithms and data structures.
 
+*MS: From comparing the provided before and fixed recordings, the improvement became not clear to me. Where can I see this from? Of course as a Java programmer I know that using the HashSet as a fix was obvious.*
 
 <a id="markdown-exercise-3--latencies" name="exercise-3--latencies"></a>
 ### Exercise 3 - Latencies
