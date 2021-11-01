@@ -577,6 +577,8 @@ Mission Control perspective (if in Eclipse). Note that in JMC 6.0, the Automated
 Analysis doesn't really show a clear signal here (it will in JMC 6.1). Instead, go to the
 Garbage Collections page.
 
+*MS: adapt to JMC 8*
+
 In this page you can see many important aspects about each and every garbage
 collection that happened during the recording. As can be seen from the graph, garbage
 collections occur quite frequently.
