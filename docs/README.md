@@ -425,7 +425,7 @@ means that the JVM has spent more time executing that method relative to the oth
 methods. Which method is the hottest one? From where do the calls to that method
 originate?
 
-*MS: where do you have this info from? On the automatic analysis page, I can find that fact. But should I see this from the Java Application page which is currently open? Currently I see only a sequence of red rectancles probably without further meaning for someone learning JMC.*
+*MS: where do you have this info from? On the automatic analysis page, I can find that fact. But should I see this from the Java Application page which is currently open? More precisely: how can I reproduce the calculation from the analysis page? Currently I see only a sequence of red rectancles probably without further meaning for someone learning JMC.*
 
 Which method do you think would be the best one to optimize to improve the
 performance of this application?
