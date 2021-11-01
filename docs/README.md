@@ -554,6 +554,11 @@ any given time, the rest are waiting. In the latency_fixed.jfr recording, they a
 happily running in parallel. Also, no salmon-colored Java Monitor Blocked events
 can be seen at all.
 
+*MS: blocked thread times have different color now (not salmon-colored)*
+
+![no salmon-colored Java Monitor blocked events](images/ms-no-salmon-colored-blocked-events.png)
+
+
 ![eclipse jmc latency fixed all threads][eclipse-jmc-latency-fixed-all-threads]
 
 The moral of this exercise is that bad synchronization can and will kill the
