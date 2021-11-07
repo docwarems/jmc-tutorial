@@ -681,14 +681,20 @@ roots parameter when dumping the flight recorder.
 For more information on Old Object Sample events, please see the Old Object Sample
 article on Marcus' blog (hirt.se/blog).
 
+*MS: exact link is http://hirt.se/blog/?p=1055*
+
 Project 05_JFR_MemoryLeaks contains memory leaking applications. Open the
 memoryleak_before.jfr recording. It was taken before the memory leak was fixed.
 
 Select an old object sample somewhere in the middle of the interval.
 
+*MS: Where/how?*
+
 JMC- 6127 is currently being fixed - instead look at the full interval.
 
 ![eclipse jmc jfr memory live objects][eclipse-jmc-jfr-memory-live-objects]
+
+*MS: it's hard to understand what is displayed on the "Live objects" page. Generally any new page discussed in this tutorial should have an initial explaination or a link to a reference manual. Neither from your tutorial nor from your blog article it became clear that this live objects page directly related to the old object sample event. From reading you get the impression of course, but it remains vague. The title "Live objects" is maybe not the best. Why is only a leaking object called a live object?*
 
 - Can you tell when it was allocated?
 - Can you tell where it is being held on to?
@@ -697,6 +703,31 @@ JMC- 6127 is currently being fixed - instead look at the full interval.
 - How many Old Object Samples are kept?
 - Open the memoryleak_fixed.jfr. Do you see any differences?
 
+*MS: no answers given in the README.txt of this step. Here are mine: *
+
+> Can you tell when it was allocated?
+
+From the properties frame on the bottom left. Or from the allocation time from the event browser list.
+	
+> Can you tell where it is being held on to?
+
+You mean by looking at the stacktrace?
+
+> How many allocation events does the recording have?
+
+You mean by looking at the number of allocation events in event browser?
+
+> How many Old Object Samples are kept?
+
+From looking at the number of old object samples events?
+
+>  Open the memoryleak_fixed.jfr. Do you see any differences?
+
+No more old object sample events. No more live objects (but the live objects page remained vague to me)
+
+*MS: this video which refers to your tutorial, make a few more things clear: https://www.youtube.com/watch?v=DM8hiMrQB7g*
+
+*MS: what is the "last known heap size" event property. I mean on the application page, when I activate the heap usage chart option, it gives me the typical saw tooth graph. How does this graph relates to the heap size from the old object sample events?*
 
 <a id="markdown-exercise-6-bonus--weblogic-server-integration" name="exercise-6-bonus--weblogic-server-integration"></a>
 ### Exercise 6 (Bonus) - WebLogic Server Integration
